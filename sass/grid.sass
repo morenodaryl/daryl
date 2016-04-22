@@ -1,0 +1,39 @@
+$screens: 0px
+$screenm: 600px
+$screenl: 1200px
+
+.col
+	position: relative
+	margin: 0 !important
+	padding: 0 !important
+	width: 100%
+	clear: both
+	&:after
+		content: ''
+		clear: both
+		display: block
+
+.col
+	& > div
+		float: left
+		&:last-child
+			clear: right
+		&:first-child
+			clear: left
+
+	@media screen and (min-width: $screens)
+		@for $i from 1 through 12
+			.s#{$i}
+				width: #{$i * 100 / 12}% !important
+
+	@media screen and (min-width: $screenm)
+		@for $i from 1 through 12
+			.m#{$i}
+				width: #{$i * 100 / 12}% !important
+		
+	@media screen and (min-width: $screenl)
+		@for $i from 1 through 12
+			.l#{$i}
+				width: #{$i * 100 / 12}% !important
+		
+	
