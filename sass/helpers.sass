@@ -1,0 +1,76 @@
+.center
+	text-align: center
+
+.responsive-img
+	min-width: 0
+	max-width: 100%
+	height: auto
+
+@font-face
+	font-family: 'icomoon'
+	src: url(fonts/icomoon.ttf)
+
+.icon
+	font-family: 'icomoon'
+	font-style: normal
+	
+
+.mail-envelope-open:before 
+	content: "\e904"
+.school:before 
+	content: "\e900"
+.profile:before 
+	content: "\e905"
+.location:before 
+	content: "\e906"
+.location2:before 
+	content: "\e907"
+.user-tie:before 
+	content: "\e901"
+.wrench:before 
+	content: "\e908"
+.briefcase:before 
+	content: "\e902"
+.flag:before 
+	content: "\e903"
+.twitter:before 
+	content: "\e909"
+.cake:before
+	content: "\e90a"
+
+
+@mixin transform($transforms) 
+	-moz-transform: $transforms
+	-o-transform: $transforms
+	-ms-transform: $transforms
+	-webkit-transform: $transforms
+	transform: $transforms
+
+@mixin background-size($b)
+	-webkit-background-size: $b
+	-moz-background-size: $b
+	-o-background-size: $b
+	background-size: $b
+
+@keyframes circlemove
+	$circlesize: 30px
+	0%
+		background-position: -#{$circlesize * 20} 0
+	100%
+		background-position: 0 0 
+
+@keyframes inanimation
+	0%
+		transform: translate(0px, 100px)
+		opacity: 0
+	100%
+		transform: translate(0px, 0px)
+		opacity: 1
+
+@keyframes menuflex
+	0%
+		transform: translate(-50px,0px)
+		opacity: 0
+	100%
+		transform: translate(0px, 0px)
+		opacity: 1
