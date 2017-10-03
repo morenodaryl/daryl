@@ -1,9 +1,10 @@
 $bgcolor: #EAEEFF
-$secondcolor: #53267E
+$secondcolor: #124e96
 // $secondcolor: #66267E
-$textcolor: #4F5B5F
+$textcolor: #604F4F
 $repintcolor: #4F5B5F
 $myblack: #3A3A3A
+$linecolor: #BBDAF2
 
 
 body
@@ -32,7 +33,7 @@ nav
 		position: fixed !important
 		animation: fromtop 1s ease 0s 1
 		@keyframes fromtop
-			0% 
+			0%
 				top: -60px
 			100%
 				top: 0px
@@ -42,7 +43,7 @@ nav
 			background-color: $myblack
 			// padding-right: 0px !important
 			@media screen and (max-width: 956px)
-				padding: 2px 60px 
+				padding: 2px 60px
 				&:after
 					display: none
 			@media screen and (min-width: $screenm)
@@ -103,7 +104,7 @@ section
 			height: $circlesize
 			animation: circlemove 1.3s ease-out 0s 1
 
-			
+
 
 			// background-color: red
 		.welcome
@@ -114,7 +115,7 @@ section
 		.container
 			max-width: 600px !important
 			margin: 0 auto
-			h2, p 
+			h2, p
 				margin: 0 !important
 			.right
 				margin-left: 10px
@@ -140,25 +141,26 @@ section
 		// background-image: url(img/galaxy.jpg)
 		@include background-size(cover)
 		padding: 40px 0px
+
 		.content
-			$linecolor: rgba(white, 0.9)
 			max-width: 1000px
 			margin: 0 auto
 			padding: 0px 5px
 			.timeline
 				$p: 8.46%
-				$c: $myblack
-				background-image: repeating-linear-gradient(to right, transparent, transparent 20px, $bgcolor 20px, $bgcolor 40px) ,linear-gradient($bgcolor 98%, transparent 98%), linear-gradient(to right,transparent, transparent $p, $c $p, $c #{100% - $p + 0.36}, transparent #{100% - $p + 0.36}), 
+				$c: $linecolor
+				background-image: repeating-linear-gradient(to right, transparent, transparent 20px, $bgcolor 20px, $bgcolor 40px) ,linear-gradient($bgcolor 98%, transparent 98%), linear-gradient(to right,transparent, transparent $p, $c $p, $c #{100% - $p + 0.36}, transparent #{100% - $p + 0.36}),
 				p
 					margin: 0
 				h3
 					margin: 10px
 			.timeline:last-child
 				background-image: none
-					
+
 			// .year-container
+
 			.year-container
-				$c: $myblack
+				$c: $linecolor
 				background-image: linear-gradient(90deg,transparent, transparent 49%, $c 49%, $c 51%, transparent 51%)
 			.year
 				display: inline-block
@@ -166,9 +168,8 @@ section
 				color: white
 				border-radius: 50%
 				padding: 40px 10px
-				border: solid 5px $myblack
-				text-shadow: 5px 2px 0 rgba(white,0.3)
-				$linecolor: white 
+				border: solid 5px white
+				// text-shadow: 5px 2px 0 rgba(white,0.3)
 
 			.timeline-description
 				position: relative
@@ -182,17 +183,20 @@ section
 					position: absolute
 					left: -33px
 					border-bottom:  20px transparent solid
-					border-right: 20px white solid 
+					border-right: 20px white solid
 					border-top:  20px transparent solid
-					border-left: 20px transparent solid 
+					border-left: 20px transparent solid
 			// background-color: #CCD0DD
 			// background-image: repeating-linear-gradient(-45deg, $linecolor, $linecolor 30px, transparent 30px, transparent 60px)
-	
+
 	&.section3
+		background-image: url('../img/bluebackground.jpg')
+		background-position: top
+		background-attachment: fixed
 		background-color: $secondcolor
 		padding: 40px 0px
 		.title
-			color: white 
+			color: white
 		.vermas
 			display: none
 		.content
@@ -204,7 +208,7 @@ section
 				color: white
 				border-radius: 10px
 				overflow: hidden
-				border: 2px solid #3A3A3A 
+				border: 2px solid #3A3A3A
 				position: relative
 				-webkit-user-drag: element
 				&.over
@@ -221,7 +225,7 @@ section
 						top: 0
 						left: 0
 						width: 100%
-						height: 100%	
+						height: 100%
 						border-radius: 50%
 						animation: beforelogo 1s ease 0s 1
 						transform: scale(2)
@@ -259,15 +263,43 @@ section
 						background-position: -0px -400px
 					&.angularjs
 						background-position: -200px -400px
-					&.ionic
+					&.android
 						background-position: -400px -400px
 					&.linux
 						background-position: -600px -400px
-	
+	&.contact
+		margin: 0 auto
+		max-width: 1000px
+		padding-bottom: 100px
+		padding: 50px
+		padding-top: 0
+		.contact-form
+			.form-control
+				margin-bottom: 10px !important
+				input, textarea
+					width: 100%
+					border: none
+					box-shadow: 0 0 3px rgb(218, 218, 218)
+					padding: 10px
+			label
+				display: block
+				width: 100%
+			input[type='submit']
+				background: $secondcolor + #333
+				border: none
+				box-shadow: 0 0 3px rgb(218, 218, 218)
+				padding: 10px
+				text-align: center
+				color: white
+				margin: 0 auto
+				display: block
+				padding-left: 30px
+				padding-right: 30px
+
 	&.section4
 		padding: 50px 0
 		background-color: $myblack
-		.title 
+		.title
 			margin-bottom: 0px
 			color: $bgcolor
 		.marginproject
@@ -278,6 +310,7 @@ section
 			display: inline-block
 			margin: 10px 0px
 			width: 100%
+			min-height: 430px
 			border-radius: 10px
 			$c1: rgba($secondcolor, 0.7)
 			$c2: transparent
@@ -330,7 +363,7 @@ section
 		.right
 			display: none
 		.icon
-			display: block    
+			display: block
 			line-height: 19px
 			margin-top: 20px
 
@@ -380,7 +413,7 @@ section
 		display: none
 		left: 0
 		&.show
-			display: inline-block	
+			display: inline-block
 			animation: menuflex 0.5s ease 0s 1
 		.options
 			height: 100vh
@@ -405,7 +438,7 @@ section
 				&:active
 					background-color: white !important
 					a
-						color: $myblack	
+						color: $myblack
 				a
 					flex: 1
 					color: white
@@ -424,7 +457,7 @@ section
 			.timeline-description
 				margin-top: 0px !important
 				margin-bottom: 0px !important
-				background-color: red 
+				background-color: red
 				&:before
 					border: none !important
 
@@ -444,10 +477,9 @@ section
 			display: block !important
 			font-size: 1.4em
 			font-weight: bold
-			left: 0 
+			left: 0
 			padding: 20px 5px
 			position: absolute
 			width: 100%
 			&.none
 				display: none !important
-

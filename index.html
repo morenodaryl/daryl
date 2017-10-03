@@ -1,225 +1,178 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
-<head >
+
+<head>
 	<meta charset="UTF-8">
 	<title>Daryl Moreno Torrez</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="Description" content="Sitio personal de Daryl Moreno Torrez, Estudios, Conocimientos y portafolio">
-	<meta name="Keywords" content="Daryl Moreno Torrez">
-	<META NAME="ROBOTS" CONTENT="INDEX, NOFOLLOW">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta name="Description" content="Sitio personal de Daryl Moreno Torrez, Estudios, Conocimientos y portafolio" />
+	<meta name="Keywords" content="Daryl Moreno Torrez" />
+	<META NAME="ROBOTS" CONTENT="INDEX, NOFOLLOW" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script> -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script> -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://unpkg.com/vue"></script>
 </head>
-<body>
-	<header>
-		<nav class='col'>
-			<div class="left s12 m4">
-				<h1>Daryl Moreno</h1>
-			</div>
-			<div id='menuflex' class="right s12 m8">
-				<ul class='options'>
-					<li><a href="#section1"><i class='icon user-tie'></i>Presentación</a></li>
-					<li><a href="#section2"><i class='icon school'></i>Estudios</a></li>
-					<li><a href="#section3"><i class='icon flag'></i>Conocimientos</a></li>
-					<li><a href="#section4"><i class='icon briefcase'></i>Portafolio</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
 
-	<div id="menuflexbtn">
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
-	
-	<section id='section1' class='section1 page'>
-		<div class="container">
-			<h2 class='center welcome title'>¡Hola! ¡Bienvenidos!</h2>
-			<div class="box">
-				<div class="col">
-					<div class="s12 m4">
-						<img class='responsive-img' src="img/daryl.png">
-					</div>
-					<div class="s12 m8 ">
-						<div class="right">
-							<h2>Daryl Moreno Torrez</h2>
-							<p>Ingeniero en Sistemas. </p>
-							<hr/>
-							<div class="data">
-								<p><i class="icon wrench"></i>Desarrollador Web Full Stack. </p>
-								<p><i class="icon location"></i>Nacionalidad: Americana </p>
-								<p><i class="icon location2"></i>Vive en: Nicaragua</p>
-								<p><i class="icon cake"></i>Edad: 21</p>
-								<p><i class="icon mail-envelope-open"></i>morenodaryl@hotmail.com</p>
-								<p><i class="icon twitter"></i><a href="http://twitter.com/morenodaryl" target='_blank'>@morenodaryl</a></p>
+<body>
+	<div id="app">
+		<header>
+			<nav class='col'>
+				<div class="left s12 m4">
+					<h1>Daryl Moreno</h1>
+				</div>
+				<div id='menuflex' class="right s12 m8">
+					<ul class='options'>
+						<li><a href="#section1"><i class='icon user-tie'></i>Presentación</a></li>
+						<li><a href="#section2"><i class='icon school'></i>Estudios</a></li>
+						<li><a href="#section3"><i class='icon flag'></i>Conocimientos</a></li>
+						<li><a href="#section4"><i class='icon briefcase'></i>Portafolio</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<div id="menuflexbtn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<section id='section1' class='section1 page'>
+			<div class="container">
+				<h2 class='center welcome title'>¡Hola! ¡Bienvenidos!</h2>
+				<div class="box">
+					<div class="col">
+						<div class="s12 m4">
+							<img class='responsive-img' src="img/daryl.png">
+						</div>
+						<div class="s12 m8 ">
+							<div class="right">
+								<h2>Daryl Moreno Torrez</h2>
+								<p>Ingeniero en Sistemas. </p>
+								<hr/>
+								<div class="data">
+									<p><i class="icon wrench"></i>Desarrollador Web Full Stack. </p>
+									<p><i class="icon location"></i>Nacionalidad: Americana </p>
+									<p><i class="icon location2"></i>Vive en: Nicaragua</p>
+									<p><i class="icon cake"></i>Edad: {{age()}}</p>
+									<p><i class="icon mail-envelope-open"></i>morenodaryl@hotmail.com</p>
+									<p><i class="icon twitter"></i><a href="http://twitter.com/morenodaryl" target='_blank'>@morenodaryl</a></p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id='section2' class="section2 page">
-		<div class="content">
-			<h2 class='center title'>Estudios</h2>
-			<div class="center">
-				<div class="col timeline">
-					<div class="s12 m2 year-container">
-						<h3 class="year">2001 - 2003</h3>
-					</div>
-					<div class="s12 m10">
-						<div class="timeline-description">
-							<h3>Inicio estudios en escuela Primaria Adventista</h3>
-							<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+		<section id='section2' class="section2 page">
+			<div class="content">
+				<h2 class='center title'>Estudios</h2>
+				<div class="center">
+					<div class="col timeline">
+						<div class="s12 m2 year-container">
+							<h3 class="year">2001 - 2003</h3>
+						</div>
+						<div class="s12 m10">
+							<div class="timeline-description">
+								<h3>Inicio estudios en escuela Primaria Adventista</h3>
+								<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col timeline">
-					<div class="s12 m2 year-container">
-						<h3 class="year">2003 - 2005</h3>
-					</div>
-					<div class="s12 m10">
-						<div class="timeline-description">
-							<h3>Culmino mis estudios primarios en Escuela Bautista</h3>
-							<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+					<div class="col timeline">
+						<div class="s12 m2 year-container">
+							<h3 class="year">2003 - 2005</h3>
+						</div>
+						<div class="s12 m10">
+							<div class="timeline-description">
+								<h3>Culmino mis estudios primarios en Escuela Bautista</h3>
+								<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col timeline">
-					<div class="s12 m2 year-container">
-						<h3 class="year">2006 - 2010</h3>
-					</div>
-					<div class="s12 m10">
-						<div class="timeline-description">
-							<h3>Culmino estudios en escuela secundaria REACH</h3>
-							<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+					<div class="col timeline">
+						<div class="s12 m2 year-container">
+							<h3 class="year">2006 - 2010</h3>
+						</div>
+						<div class="s12 m10">
+							<div class="timeline-description">
+								<h3>Culmino estudios en escuela secundaria REACH</h3>
+								<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col timeline">
-					<div class="s12 m2 year-container">
-						<h3 class="year">2011 - 2015</h3>
-					</div>
-					<div class="s12 m10">
-						<div class="timeline-description">
-							<h3>Ingeniería en Sistemas en la Universidad Nacional de Ingenierías UNI RUACS</h3>
-							<p><strong>Lugar: </strong>Estelí</p>
+					<div class="col timeline">
+						<div class="s12 m2 year-container">
+							<h3 class="year">2011 - 2015</h3>
+						</div>
+						<div class="s12 m10">
+							<div class="timeline-description">
+								<h3>Ingeniería en Sistemas en la Universidad Nacional de Ingenierías UNI RUACS</h3>
+								<p><strong>Lugar: </strong>Estelí</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+		<section id='section3' class="section3 page">
+			<h2 class='center title'>Conocimientos</h2>
+			<div class="content">
+				<div class="col">
+					<div class="s12 m4 l2" v-for="k in knowledge">
+						<div class='logo' draggable='true'>
+							<div class="csslogo" v-bind:class='k.class'></div>
+							<div class="description">{{k.desc}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="vermas">Ver Más</div>
+		</section>
 
-	<section id='section3' class="section3 page">
-		<h2 class='center title'>Conocimientos</h2>
-		<div class="content">
-			<div class="col">
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo html_5"></div><div class="description">HTML 5</div>
-					</div>
+		<section class="contact">
+			<h2 class='title center'>Contacto</h2>
+			<form action="https://formspree.io/morenodaryl@hotmail.com" method="POST" class='contact-form'>
+				<div class="form-control col">
+						<label for="name">Name</label>
+						<input type="text" name="name" required="true">
 				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo css"></div><div class="description">CSS 3</div>
-					</div>
+				<div class="form-control col">
+						<label for="email">Email</label>
+						<input type="email" name="_replyto" required="true">
 				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo javascript"></div><div class="description">Javascript</div>
-					</div>
+				<div class="form-control col">
+						<label for="message">Message</label>
+						<textarea name='message' required="true"></textarea>
 				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo ruby"></div><div class="description">Ruby</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo ruby_on_rails"></div><div class="description">Ruby on Rails</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo angularjs"></div><div class="description">angularjs</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo vb_net"></div><div class="description">Vb net</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo sass"></div><div class="description">SASS</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo coffeescript"></div><div class="description">Coffeescript</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo linux"></div><div class="description">linux</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo mysql"></div><div class="description">Mysql</div>
-					</div>
-				</div>
-				<div class="s12 m4 l2">
-					<div class='logo' draggable='true'>
-						<div class="csslogo ionic"></div><div class="description">ionic</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="vermas">Ver Más</div>
-	</section>
+				<input type="submit" value="Send"/>
+			</form>
+		</section>
 
-	<section id='section4' class="section4">
-		<h2 class='title center'>Portafolio</h2>
-		<div class='col center'>
-			<div class='s12 m6 l4'>
-				<div class="marginproject">
-					<div class="project">
-						<h3>Ciudad del pan</h3>
-						<p>Blog basado en Wordpress con el fin de informar cualquier tipo de noticia a nivel Nacional o local <a href="http://www.ciudaddelpan.xyz">http://www.ciudaddelpan.xyz</a></p>
-						<a href="http://www.ciudaddelpan.xyz" target='_blank'><img src="img/ciudaddelpan.jpg"/></a>
+		<section id='section4' class="section4">
+			<h2 class='title center'>Portafolio</h2>
+			<div class='col center'>
+				<div class='s12 m6 l4' v-for='p in portfolio'>
+					<div class="marginproject">
+						<div class="project">
+							<h3>{{p.title}}</h3>
+							<p> {{p.desc}}
+								<br/>
+								<a v-bind:href="p.url">{{p.url}}</a></p>
+							<a v-bind:href="p.url" target='_blank'><img v-bind:src='p.img'/></a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class='s12 m6 l4'>
-				<div class="marginproject">
-					<div class="project">
-						<h3>Campamento JA</h3>
-						<p>Aplicación movil con el obetivo de informar las distintas actividades a realizarse en el campamento nacional de Guías Mayores 2016 <a href="http://bit.ly/CampamentoJA" title='link de descarga Mediafire' target='_blank'>http://bit.ly/CampamentoJA</a></p>
-						<a href="http://bit.ly/CampamentoJA" title='link de descarga Mediafire' target='_blank'><img src="img/campamentoja.jpg"/></a>
-					</div>
-				</div>
-			</div>
-			<div class='s12 m6 l4'>
-				<div class="marginproject">
-					<div class="project">
-						<h3>Familia Sansón</h3>
-						<p>Página web dedicada a clubes de Conquistadores, Guías Mayores y Aventureros <br/> <a href="http://sanson.herokuapp.com/" target='_blank'>http://sanson.herokuapp.com/</a></p>
-						<a href="http://sanson.herokuapp.com/" target='_blank'><img src="img/sanson.jpg"/></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-		
-	<script type="" src='script.js'></script>
-		
+		</section>
+
+	</div>
+	<script src="myvue.js"></script>
+	<script src='script.js'></script>
 </body>
+
 </html>
