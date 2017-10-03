@@ -323,7 +323,7 @@ section.section2 {
         border-top: 20px transparent solid;
         border-left: 20px transparent solid; }
 section.section3 {
-  background-image: url("../img/bluebackground.jpg");
+  background-image: url("img/bluebackground.jpg");
   background-position: top;
   background-attachment: fixed;
   background-color: #124e96;
