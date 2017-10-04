@@ -8,38 +8,40 @@
 
 @font-face
 	font-family: 'icomoon'
-	src: url(fonts/icomoon.ttf)
+	src: url(../fonts/icomoon.ttf)
 
 .icon
 	font-family: 'icomoon'
 	font-style: normal
-	
 
-.mail-envelope-open:before 
+
+.mail-envelope-open:before
 	content: "\e904"
-.school:before 
+.school:before
 	content: "\e900"
-.profile:before 
+.profile:before
 	content: "\e905"
-.location:before 
+.location:before
 	content: "\e906"
-.location2:before 
+.location2:before
 	content: "\e907"
-.user-tie:before 
+.user-tie:before
 	content: "\e901"
-.wrench:before 
+.wrench:before
 	content: "\e908"
-.briefcase:before 
+.briefcase:before
 	content: "\e902"
-.flag:before 
+.flag:before
 	content: "\e903"
-.twitter:before 
+.twitter:before
 	content: "\e909"
 .cake:before
 	content: "\e90a"
+.language:before
+	content: "\e9ca"
 
 
-@mixin transform($transforms) 
+@mixin transform($transforms)
 	-moz-transform: $transforms
 	-o-transform: $transforms
 	-ms-transform: $transforms
@@ -57,7 +59,7 @@
 	0%
 		background-position: -#{$circlesize * 20} 0
 	100%
-		background-position: 0 0 
+		background-position: 0 0
 
 @keyframes inanimation
 	0%

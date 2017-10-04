@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Daryl Moreno Torrez</title>
+	<title>Ing. Daryl Moreno Torrez</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 	<meta name="Description" content="Sitio personal del Ing. Daryl Moreno Torrez, Estudios, Conocimientos y portafolio" />
 	<meta name="Keywords" content="Daryl Moreno Torrez" />
@@ -20,8 +20,10 @@
 	<link rel="icon" href="favicon.png" type="image/x-icon">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
 </head>
 
 <body>
@@ -33,10 +35,16 @@
 				</div>
 				<div id='menuflex' class="right s12 m8">
 					<ul class='options'>
-						<li><a href="#section1"><i class='icon user-tie'></i>Presentación</a></li>
-						<li><a href="#section2"><i class='icon school'></i>Estudios</a></li>
-						<li><a href="#section3"><i class='icon flag'></i>Conocimientos</a></li>
-						<li><a href="#section4"><i class='icon briefcase'></i>Portafolio</a></li>
+						<li><a href="#section1"><i class='icon user-tie'></i>{{ $t("about_me") }}</a></li>
+						<li><a href="#section2"><i class='icon school'></i>{{ $t("studies.title") }}</a></li>
+						<li><a href="#section3"><i class='icon flag'></i>{{ $t("knowledge") }}</a></li>
+						<li><a href="#section4"><i class='icon briefcase'></i>{{ $t("portfolio") }}</a></li>
+						<li><a class='language-selection'><i class='icon language'></i>
+							<ul>
+								<li><router-link to="/en">English</router-link></li>
+								<li><router-link to="/es">Español</router-link></li>
+							</ul>
+						</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -50,7 +58,7 @@
 
 		<section id='section1' class='section1 page'>
 			<div class="container">
-				<h2 class='center welcome title'>¡Hola! ¡Bienvenidos!</h2>
+				<h2 class='center welcome title'>{{ $t("welcome") }}</h2>
 				<div class="box">
 					<div class="col">
 						<div class="s12 m4">
@@ -59,13 +67,13 @@
 						<div class="s12 m8 ">
 							<div class="right">
 								<h2>Daryl Moreno Torrez</h2>
-								<p>Ingeniero en Sistemas. </p>
+								<p>{{ $t("system_engineer") }}</p>
 								<hr/>
 								<div class="data">
-									<p><i class="icon wrench"></i>Desarrollador Web Full Stack. </p>
-									<p><i class="icon location"></i>Nacionalidad: Americana </p>
-									<p><i class="icon location2"></i>Vive en: Nicaragua</p>
-									<p><i class="icon cake"></i>Edad: {{age()}}</p>
+									<p><i class="icon wrench"></i>{{ $t("developer") }}</p>
+									<p><i class="icon location"></i>{{ $t("nationality") }}</p>
+									<p><i class="icon location2"></i>{{ $t("live_in") }}</p>
+									<p><i class="icon cake"></i>{{ $t("age") }}: {{age}}</p>
 									<p><i class="icon mail-envelope-open"></i>morenodaryl@hotmail.com</p>
 									<p><i class="icon twitter"></i><a href="http://twitter.com/morenodaryl" target='_blank'>@morenodaryl</a></p>
 								</div>
@@ -78,7 +86,7 @@
 
 		<section id='section2' class="section2 page">
 			<div class="content">
-				<h2 class='center title'>Estudios</h2>
+				<h2 class='center title'>{{$t("studies.title")}}</h2>
 				<div class="center">
 					<div class="col timeline">
 						<div class="s12 m2 year-container">
@@ -86,8 +94,8 @@
 						</div>
 						<div class="s12 m10">
 							<div class="timeline-description">
-								<h3>Inicio estudios en escuela Primaria Adventista</h3>
-								<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+								<h3>{{$t("studies.adventist")}}</h3>
+								<p><strong>{{$t("place")}}: </strong>La Trindad - Estelí</p>
 							</div>
 						</div>
 					</div>
@@ -97,8 +105,8 @@
 						</div>
 						<div class="s12 m10">
 							<div class="timeline-description">
-								<h3>Culmino mis estudios primarios en Escuela Bautista</h3>
-								<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+								<h3>{{$t("studies.baptist")}}</h3>
+								<p><strong>{{$t("place")}}: </strong>La Trindad - Estelí</p>
 							</div>
 						</div>
 					</div>
@@ -108,8 +116,8 @@
 						</div>
 						<div class="s12 m10">
 							<div class="timeline-description">
-								<h3>Culmino estudios en escuela secundaria REACH</h3>
-								<p><strong>Lugar: </strong>La Trindad - Estelí</p>
+								<h3>{{$t("studies.reach")}}</h3>
+								<p><strong>{{$t("place")}}: </strong>La Trindad - Estelí</p>
 							</div>
 						</div>
 					</div>
@@ -119,8 +127,8 @@
 						</div>
 						<div class="s12 m10">
 							<div class="timeline-description">
-								<h3>Ingeniería en Sistemas en la Universidad Nacional de Ingenierías UNI RUACS</h3>
-								<p><strong>Lugar: </strong>Estelí</p>
+								<h3>{{$t("studies.uni")}}</h3>
+								<p><strong>{{$t("place")}}: </strong>Estelí</p>
 							</div>
 						</div>
 					</div>
@@ -128,7 +136,7 @@
 			</div>
 		</section>
 		<section id='section3' class="section3 page">
-			<h2 class='center title'>Conocimientos</h2>
+			<h2 class='center title'>{{$t("knowledge")}}</h2>
 			<div class="content">
 				<div class="col">
 					<div class="s12 m4 l2" v-for="k in knowledge">
@@ -143,32 +151,32 @@
 		</section>
 
 		<section class="contact">
-			<h2 class='title center'>Contacto</h2>
+			<h2 class='title center'>{{$t("contact.title")}}</h2>
 			<form action="https://formspree.io/morenodaryl@hotmail.com" method="POST" class='contact-form'>
 				<div class="form-control col">
-					<label for="name">Name</label>
+					<label for="name">{{$t("contact.name")}}</label>
 					<input type="text" name="name" required="true">
 				</div>
 				<div class="form-control col">
-					<label for="email">Email</label>
+					<label for="email">{{$t("contact.email")}}</label>
 					<input type="email" name="_replyto" required="true">
 				</div>
 				<div class="form-control col">
-					<label for="message">Message</label>
+					<label for="message">{{$t("contact.message")}}</label>
 					<textarea name='message' required="true"></textarea>
 				</div>
-				<input type="submit" value="Send" />
+				<input type="submit" v-bind:value="$t('contact.send')" />
 			</form>
 		</section>
 
 		<section id='section4' class="section4">
-			<h2 class='title center'>Portafolio</h2>
+			<h2 class='title center'>{{$t("portfolio")}}</h2>
 			<div class='col center'>
 				<div class='s12 m6 l4' v-for='p in portfolio'>
 					<div class="marginproject">
 						<div class="project">
 							<h3>{{p.title}}</h3>
-							<p> {{p.desc}}
+							<p> {{$t(p.title)}}
 								<br/>
 								<a v-bind:href="p.url">{{p.url}}</a></p>
 							<a v-bind:href="p.url" target='_blank'><img v-bind:src='p.img'/></a>
@@ -179,7 +187,7 @@
 		</section>
 
 	</div>
-	<script src="myvue.js"></script>
+	<script src="js/packed/myvue.js"></script>
 	<script src='script.js'></script>
 </body>
 
