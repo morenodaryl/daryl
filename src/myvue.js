@@ -113,12 +113,12 @@ var app = new Vue({
       {
         title: 'Campamento JA',
         url: 'http://bit.ly/CampamentoJA',
-        img: 'img/sanson.jpg',
+        img: 'img/campamentoja.jpg',
       },
       {
         title: 'Familia Sansón',
         url: 'http://sanson.herokuapp.com/',
-        img: 'img/campamentoja.jpg',
+        img: 'img/sanson.jpg',
       },
     ]
   }

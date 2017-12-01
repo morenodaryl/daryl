@@ -14,9 +14,9 @@ var messages = {
     studies: {
       title: "Studies",
       adventist: 'Started studying in the adventist primary school',
-      baptist: 'Ended primary school in the Baptist school',
-      reach: 'Ended high school in Reach College',
-      uni: 'Finish my career as a System Engineer'
+      baptist: 'Finished up primary school in the Baptist school',
+      reach: 'Finished up high school in Reach College',
+      uni: 'Finished up my career as a System Engineer'
     },
     contact: {
       title: "Contact me",
@@ -38,7 +38,7 @@ var messages = {
     portfolio: 'Portafolio',
     system_engineer: 'Ingeniero en sistemas',
     developer: 'Web Developer Full Stack',
-    nationality: 'Nacionalidad: American',
+    nationality: 'Nacionalidad: Americana',
     live_in: 'Vive en: Nicaragua',
     age: 'Edad',
     place: 'Lugar',
