@@ -80,19 +80,20 @@ var messages = {
     knowledge: 'Knowledge',
     knowledges: 'Knowledge',
     portfolio: 'Portfolio',
-    system_engineer: 'System Engineer',
-    developer: 'Web Developer Full Stack',
+    system_engineer: 'Computer Scientist',
+    developer: 'Android and Web Developer Full Stack',
     nationality: 'Nationality: American',
-    live_in: 'Live in: Nicaragua',
+    live_in: 'Live in: Los Angeles, CA',
     age: 'Age',
     place: 'Place',
     studies: {
       title: "Studies",
-      adventist: 'Started studying in the adventist primary school',
+      adventist: 'Started studying in the Adventist primary school',
       baptist: 'Finished up primary school in the Baptist school',
       reach: 'Finished up high school in Reach College',
       uni: 'Finished up my career as a System Engineer'
     },
+    more: 'more...',
     contact: {
       title: "Contact me",
       name: "Name",
@@ -100,11 +101,12 @@ var messages = {
       message: "Message",
       send: 'Send'
     },
-    "Himnario Adventista": "This app has the two hymn books (new and old) with its respectives lyrics and numbers",
-    "Biblia Reina Valera 1690": "Find all the bible's verses quickly and easily without internet conection",
-    "Ciudad del pan (descontinuado)": "A blog based on wordpress with the only goal to inform about any local or national news",
-    "Campamento JA": "Movil app which only aim is to informate about the diferents events to do in the national camp of master guides 2016",
-    "Familia Sansón": "Website dedicated to pathfinders, master guides and adventurers clubes"
+    "Himnario Adventista": "This app has the two hymn books (new and old) with its respective lyrics and numbers",
+    "Biblia Reina Valera 1690": "Find all the bible's verses quickly and easily without internet connection",
+    "Ciudad del pan (descontinuado)": "(discontinued) A blog based on wordpress with the only goal to inform about any local or national news",
+    "Campamento JA": "Mobil app which only aim is to inform about the different events to do in the national camp of master guides 2016",
+    "Familia Sansón": "Website dedicated to pathfinders, master guides and adventurers clubs",
+    "Lyrics Finder": "Single web page application dedicated to find any lyrics of any song"
   },
   es: {
     welcome: '¡Hola! ¡Bienvenido!',
@@ -112,9 +114,9 @@ var messages = {
     knowledge: 'Conocimientos',
     portfolio: 'Portafolio',
     system_engineer: 'Ingeniero en sistemas',
-    developer: 'Web Developer Full Stack',
+    developer: 'Android and Web Developer Full Stack',
     nationality: 'Nacionalidad: Americana',
-    live_in: 'Vive en: Nicaragua',
+    live_in: 'Vive en: Los Angeles, CA',
     age: 'Edad',
     place: 'Lugar',
     studies: {
@@ -124,6 +126,7 @@ var messages = {
       reach: 'Terminó estudios de secundaria en el colegio REACH',
       uni: 'Se graduó en Ingeniería de Sistemas en la Universidad Nacional de Ingenierías UNI RUACS'
     },
+    more: 'Ver mas',
     contact: {
       title: "Contacto",
       name: "Nombre",
@@ -132,15 +135,16 @@ var messages = {
       send: 'Enviar'
     },
     "Himnario Adventista": "Está aplicación contiene los dos himnarios adventistas (Nuevo y viejo) con sus respectivas letras y numeraciones ",
-    "Biblia Reina Valera 1690": "Encuentra todos los versículos de la Biblia rápido, facíl y sin conexión a internet ",
+    "Biblia Reina Valera 1690": "Encuentra todos los versículos de la Biblia rápido, fácil y sin conexión a internet ",
     "Ciudad del pan (descontinuado)": "Blog basado en Wordpress con el fin de informar cualquier tipo de noticia a nivel Nacional o local ",
-    "Campamento JA": "Aplicación movil con el obetivo de informar las distintas actividades a realizarse en el campamento nacional de Guías Mayores 2016 ",
-    "Familia Sansón": "Página web dedicada a clubes de Conquistadores, Guías Mayores y Aventureros"
+    "Campamento JA": "Aplicación móvil con el objetivo de informar las distintas actividades a realizarse en el campamento nacional de Guías Mayores 2016 ",
+    "Familia Sansón": "Página web dedicada a clubes de Conquistadores, Guías Mayores y Aventureros",
+    "Lyrics Finder": "Single web page application dedicada a encontrar letras de cualquier canción"
   }
 };
 
 exports.default = new VueI18n({
-  locale: 'es', // set locale
+  locale: 'en', // set locale
   messages: messages // set locale messages
 });
 
@@ -176,10 +180,6 @@ module.exports = __webpack_require__(1);
 
 "use strict";
 
-
-var saludar = function saludar(nombre) {
-  return console.log("nombre");
-};
 
 /***/ }),
 /* 4 */
@@ -220,7 +220,7 @@ var app = new Vue({
         age -= 1;
       }
       if (today.getMonth() == birthday.getMonth() && today.getDate() == birthday.getDate()) {
-        age = "HOY ES SU CUMPLEAÑOS";
+        age = "Today is his birthday";
       }
       return age;
     }
@@ -230,11 +230,11 @@ var app = new Vue({
       _i18n2.default.locale = l;
     },
     check_lang: function check_lang() {
-      if (!(this.$route.params.lang == "es" || this.$route.params.lang == "en")) {
-        this.$router.replace({ path: '/es' });
+      var lang = this.$route.params.lang;
+      if (!(lang == "es" || lang == "en")) {
+        this.$router.replace({ path: '/en' });
       }
       this.$i18n.locale = this.$route.params.lang;
-      console.log(this.$route.params.lang);
     }
   },
   watch: {
@@ -244,15 +244,6 @@ var app = new Vue({
   },
   data: {
     knowledge: [{
-      class: "html_5",
-      desc: "HTML 5"
-    }, {
-      class: "css",
-      desc: "CSS 3"
-    }, {
-      class: "javascript",
-      desc: "Javascript"
-    }, {
       class: "ruby",
       desc: "Ruby"
     }, {
@@ -262,8 +253,17 @@ var app = new Vue({
       class: "android",
       desc: "Android"
     }, {
-      class: "angularjs",
-      desc: "angularjs"
+      class: "reactjs",
+      desc: "React.js"
+    }, {
+      class: "html_5",
+      desc: "HTML 5"
+    }, {
+      class: "css",
+      desc: "CSS 3"
+    }, {
+      class: "javascript",
+      desc: "Javascript"
     }, {
       class: "vb_net",
       desc: "Vb net"
@@ -289,6 +289,14 @@ var app = new Vue({
       url: 'https://goo.gl/hD4dLa',
       img: 'img/biblia.png'
     }, {
+      title: 'Lyrics Finder',
+      url: 'https://morenodaryl.github.io/lyricsfinder',
+      img: 'img/lyricsfinder.jpg'
+    }, {
+      title: 'Familia Sansón',
+      url: 'http://sanson.herokuapp.com/',
+      img: 'img/sanson.jpg'
+    }, {
       title: 'Ciudad del pan (descontinuado)',
       url: 'http://www.ciudaddelpan.xyz',
       img: 'img/ciudaddelpan.jpg'
@@ -296,10 +304,6 @@ var app = new Vue({
       title: 'Campamento JA',
       url: 'http://bit.ly/CampamentoJA',
       img: 'img/campamentoja.jpg'
-    }, {
-      title: 'Familia Sansón',
-      url: 'http://sanson.herokuapp.com/',
-      img: 'img/sanson.jpg'
     }]
   }
 });

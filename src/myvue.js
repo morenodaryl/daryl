@@ -22,7 +22,7 @@ var app = new Vue({
         age -= 1;
       }
       if (today.getMonth() == birthday.getMonth() && today.getDate() == birthday.getDate()) {
-        age = "HOY ES SU CUMPLEAÑOS"
+        age = "Today is his birthday"
       }
       return age;
     }
@@ -32,11 +32,11 @@ var app = new Vue({
       i18n.locale = l;
     },
     check_lang: function(){
-      if (!(this.$route.params.lang == "es" || this.$route.params.lang == "en")) {
-         this.$router.replace({path: '/es'});
+      let lang = this.$route.params.lang;
+      if (!(lang == "es" || lang == "en")) {
+        this.$router.replace({path: '/en'});
       }
       this.$i18n.locale = this.$route.params.lang;
-      console.log(this.$route.params.lang);
     }
   },
   watch:{
@@ -45,18 +45,7 @@ var app = new Vue({
     }
   },
   data: {
-    knowledge: [{
-        class: "html_5",
-        desc: "HTML 5"
-      },
-      {
-        class: "css",
-        desc: "CSS 3"
-      },
-      {
-        class: "javascript",
-        desc: "Javascript"
-      },
+    knowledge: [
       {
         class: "ruby",
         desc: "Ruby"
@@ -70,8 +59,20 @@ var app = new Vue({
         desc: "Android"
       },
       {
-        class: "angularjs",
-        desc: "angularjs"
+        class: "reactjs",
+        desc: "React.js"
+      },
+      {
+        class: "html_5",
+        desc: "HTML 5"
+      },
+      {
+        class: "css",
+        desc: "CSS 3"
+      },
+      {
+        class: "javascript",
+        desc: "Javascript"
       },
       {
         class: "vb_net",
@@ -106,6 +107,16 @@ var app = new Vue({
         img: 'img/biblia.png',
       },
       {
+        title: 'Lyrics Finder',
+        url: 'https://morenodaryl.github.io/lyricsfinder',
+        img: 'img/lyricsfinder.jpg',
+      },
+      {
+        title: 'Familia Sansón',
+        url: 'http://sanson.herokuapp.com/',
+        img: 'img/sanson.jpg',
+      },
+      {
         title: 'Ciudad del pan (descontinuado)',
         url: 'http://www.ciudaddelpan.xyz',
         img: 'img/ciudaddelpan.jpg',
@@ -114,11 +125,6 @@ var app = new Vue({
         title: 'Campamento JA',
         url: 'http://bit.ly/CampamentoJA',
         img: 'img/campamentoja.jpg',
-      },
-      {
-        title: 'Familia Sansón',
-        url: 'http://sanson.herokuapp.com/',
-        img: 'img/sanson.jpg',
       },
     ]
   }

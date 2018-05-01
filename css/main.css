@@ -268,12 +268,12 @@ nav {
           cursor: pointer;
           color: #124e96; }
 
-section.section1 {
+section.presentation {
   position: relative;
   padding: 130px 5px 100px 5px;
   background: url(../img/galaxy.jpg) no-repeat center center fixed;
   background-size: cover; }
-  section.section1:after {
+  section.presentation:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -283,19 +283,19 @@ section.section1 {
     width: 100%;
     height: 30px;
     animation: circlemove 1.3s ease-out 0s 1; }
-  section.section1 .welcome {
+  section.presentation .welcome {
     color: #604F4F;
     font-size: 2.5em; }
-  section.section1 .title {
+  section.presentation .title {
     color: white; }
-  section.section1 .container {
+  section.presentation .container {
     max-width: 600px !important;
     margin: 0 auto; }
-    section.section1 .container h2, section.section1 .container p {
+    section.presentation .container h2, section.presentation .container p {
       margin: 0 !important; }
-    section.section1 .container .right {
+    section.presentation .container .right {
       margin-left: 10px; }
-    section.section1 .container .box {
+    section.presentation .container .box {
       background-color: rgba(255, 255, 255, 0.9);
       box-shadow: 0 0 17px -9px;
       border-left: rgba(18, 78, 150, 0.55) solid 8px;
@@ -303,13 +303,13 @@ section.section1 {
       margin-top: 40px;
       margin-bottom: 60px;
       animation: inanimation 1s ease 0s 1; }
-      section.section1 .container .box .icon {
+      section.presentation .container .box .icon {
         color: #5c5c5c;
         margin-right: 10px; }
-      section.section1 .container .box h2 {
+      section.presentation .container .box h2 {
         color: #4F5B5F; }
 
-section.section2 {
+section.studies {
   position: relative;
   width: 100%;
   display: block;
@@ -319,20 +319,20 @@ section.section2 {
   -o-background-size: cover;
   background-size: cover;
   padding: 40px 0px; }
-  section.section2 .content {
+  section.studies .content {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0px 5px; }
-    section.section2 .content .timeline {
+    section.studies .content .timeline {
       background-image: repeating-linear-gradient(to right, transparent, transparent 20px, #EAEEFF 20px, #EAEEFF 40px), linear-gradient(#EAEEFF 98%, transparent 98%), linear-gradient(to right, transparent, transparent 8.46%, #BBDAF2 8.46%, #BBDAF2 91.9%, transparent 91.9%), p;
         background-image-margin: 0; }
-      section.section2 .content .timeline h3 {
+      section.studies .content .timeline h3 {
         margin: 10px; }
-    section.section2 .content .timeline:last-child {
+    section.studies .content .timeline:last-child {
       background-image: none; }
-    section.section2 .content .year-container {
+    section.studies .content .year-container {
       background-image: linear-gradient(90deg, transparent, transparent 49%, #BBDAF2 49%, #BBDAF2 51%, transparent 51%); }
-    section.section2 .content .year {
+    section.studies .content .year {
       display: inline-block;
       background-image: url("../img/bluebackground.jpg");
       background-color: #124e96;
@@ -341,14 +341,14 @@ section.section2 {
       border-radius: 50%;
       padding: 40px 10px;
       border: solid 5px white; }
-    section.section2 .content .timeline-description {
+    section.studies .content .timeline-description {
       position: relative;
       margin: 16px auto;
       padding: 10px 10px;
       background-color: white;
       border-radius: 5px;
       box-shadow: 0 0 21px -9px black; }
-      section.section2 .content .timeline-description:before {
+      section.studies .content .timeline-description:before {
         content: '';
         position: absolute;
         left: -33px;
@@ -357,19 +357,19 @@ section.section2 {
         border-top: 20px transparent solid;
         border-left: 20px transparent solid; }
 
-section.section3 {
+section.skills {
   background-image: url("../img/bluebackground.jpg");
   background-position: top;
   background-attachment: fixed;
   background-color: #124e96;
   padding: 40px 0px; }
-  section.section3 .title {
+  section.skills .title {
     color: white; }
-  section.section3 .vermas {
+  section.skills .vermas {
     display: none; }
-  section.section3 .content {
+  section.skills .content {
     text-align: center; }
-    section.section3 .content .logo {
+    section.skills .content .logo {
       display: inline-block;
       margin: 10px auto;
       background-color: #3A3A3A;
@@ -379,13 +379,13 @@ section.section3 {
       border: 2px solid #3A3A3A;
       position: relative;
       -webkit-user-drag: element; }
-      section.section3 .content .logo.over {
+      section.skills .content .logo.over {
         background-color: rgba(255, 255, 255, 0.5);
         transform: scale(1.1); }
-      section.section3 .content .logo:hover {
+      section.skills .content .logo:hover {
         transition: all ease 0.3s;
         cursor: move; }
-        section.section3 .content .logo:hover:before {
+        section.skills .content .logo:hover:before {
           content: '';
           background-color: rgba(18, 78, 150, 0.1);
           position: absolute;
@@ -402,38 +402,38 @@ section.section3 {
     transform: scale(0); }
   80% {
     transform: scale(2); } }
-      section.section3 .content .logo .description {
+      section.skills .content .logo .description {
         font-size: 1.5em;
         padding: 10px; }
-      section.section3 .content .logo .csslogo {
+      section.skills .content .logo .csslogo {
         width: 200px;
         height: 200px;
         background-color: #EAEEFF;
         margin: 0 auto;
         background-image: url("../img/iconos.png"); }
-        section.section3 .content .logo .csslogo.ruby {
+        section.skills .content .logo .csslogo.ruby {
           background-position: 0px 0px; }
-        section.section3 .content .logo .csslogo.ruby_on_rails {
+        section.skills .content .logo .csslogo.ruby_on_rails {
           background-position: -200px 0px; }
-        section.section3 .content .logo .csslogo.mysql {
+        section.skills .content .logo .csslogo.mysql {
           background-position: -400px 0px; }
-        section.section3 .content .logo .csslogo.vb_net {
+        section.skills .content .logo .csslogo.vb_net {
           background-position: -600px 0px; }
-        section.section3 .content .logo .csslogo.html_5 {
+        section.skills .content .logo .csslogo.html_5 {
           background-position: 0px -200px; }
-        section.section3 .content .logo .csslogo.css {
+        section.skills .content .logo .csslogo.css {
           background-position: -200px -200px; }
-        section.section3 .content .logo .csslogo.sass {
+        section.skills .content .logo .csslogo.sass {
           background-position: -400px -200px; }
-        section.section3 .content .logo .csslogo.javascript {
+        section.skills .content .logo .csslogo.javascript {
           background-position: -600px -200px; }
-        section.section3 .content .logo .csslogo.coffeescript {
+        section.skills .content .logo .csslogo.coffeescript {
           background-position: -0px -400px; }
-        section.section3 .content .logo .csslogo.angularjs {
+        section.skills .content .logo .csslogo.reactjs {
           background-position: -200px -400px; }
-        section.section3 .content .logo .csslogo.android {
+        section.skills .content .logo .csslogo.android {
           background-position: -400px -400px; }
-        section.section3 .content .logo .csslogo.linux {
+        section.skills .content .logo .csslogo.linux {
           background-position: -600px -400px; }
 
 section.contact {
@@ -464,28 +464,28 @@ section.contact {
     padding-left: 30px;
     padding-right: 30px; }
 
-section.section4 {
+section.portfolio {
   padding: 50px 0;
   background-color: #3A3A3A; }
-  section.section4 .title {
+  section.portfolio .title {
     margin-bottom: 0px;
     color: #EAEEFF; }
-  section.section4 .marginproject {
+  section.portfolio .marginproject {
     padding: 30px; }
-  section.section4 .project {
+  section.portfolio .project {
     background-color: #EAEEFF;
     box-shadow: 0px 0px 18px -2px black;
     display: inline-block;
     margin: 10px 0px;
     width: 100%;
-    min-height: 430px;
+    min-height: 440px;
     border-radius: 10px; }
-    section.section4 .project img {
+    section.portfolio .project img {
       max-width: 100%; }
-    section.section4 .project h3 {
+    section.portfolio .project h3 {
       color: #3A3A3A;
       margin-bottom: 0; }
-    section.section4 .project p {
+    section.portfolio .project p {
       color: #3A3A3A;
       background-color: #EAEEFF;
       margin-top: 0px;
@@ -499,16 +499,16 @@ section.section4 {
 @media screen and (min-width: 600px) {
   .menuflexbtn {
     display: none; }
-  .section2 .content .col:nth-child(2n) .timeline-description:before {
+  .studies .content .col:nth-child(2n) .timeline-description:before {
     left: auto;
     right: -33px !important;
     border-left-color: white;
     border-top-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent; }
-  .section2 .content .col:nth-child(2n) .m2 {
+  .studies .content .col:nth-child(2n) .m2 {
     float: right; }
-  .section2 .content .col:nth-child(2n) .m10 {
+  .studies .content .col:nth-child(2n) .m10 {
     clear: none; } }
 
 @media screen and (max-width: 600px) {
@@ -604,29 +604,29 @@ section.section4 {
         #menuflex .options > li a {
           flex: 1;
           color: white; }
-  .section1 .box {
+  .presentation .box {
     text-align: center;
     display: block !important;
     width: auto !important;
     max-width: 250px;
     margin: 0 auto; }
-    .section1 .box .data {
+    .presentation .box .data {
       text-align: left; }
-  .section2 .content .timeline-description {
+  .studies .content .timeline-description {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
     background-color: red; }
-    .section2 .content .timeline-description:before {
+    .studies .content .timeline-description:before {
       border: none !important; }
-  .section3 {
+  .skills {
     max-height: 950px;
     overflow: hidden;
     position: relative;
     text-align: center; }
-    .section3.show {
+    .skills.show {
       transition: all 3s ease;
       max-height: none; }
-    .section3 .vermas {
+    .skills .vermas {
       background-color: gray;
       bottom: 0px;
       color: white;
@@ -638,5 +638,5 @@ section.section4 {
       padding: 20px 5px;
       position: absolute;
       width: 100%; }
-      .section3 .vermas.none {
+      .skills .vermas.none {
         display: none !important; } }

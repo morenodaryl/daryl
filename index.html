@@ -35,10 +35,10 @@
 				</div>
 				<div id='menuflex' class="right s12 m8">
 					<ul class='options'>
-						<li><a href="#section1"><i class='icon user-tie'></i>{{ $t("about_me") }}</a></li>
-						<li><a href="#section2"><i class='icon school'></i>{{ $t("studies.title") }}</a></li>
-						<li><a href="#section3"><i class='icon flag'></i>{{ $t("knowledge") }}</a></li>
-						<li><a href="#section4"><i class='icon briefcase'></i>{{ $t("portfolio") }}</a></li>
+						<li><a href="#presentation"><i class='icon user-tie'></i>{{ $t("about_me") }}</a></li>
+						<li><a href="#studies"><i class='icon school'></i>{{ $t("studies.title") }}</a></li>
+						<li><a href="#skills"><i class='icon flag'></i>{{ $t("knowledge") }}</a></li>
+						<li><a href="#portfolio"><i class='icon briefcase'></i>{{ $t("portfolio") }}</a></li>
 						<li><a class='language-selection'><i class='icon language'></i>
 							<ul>
 								<li><router-link to="/en">English</router-link></li>
@@ -56,7 +56,7 @@
 			<span></span>
 		</div>
 
-		<section id='section1' class='section1 page'>
+		<section id='presentation' class='presentation page'>
 			<div class="container">
 				<h2 class='center welcome title'>{{ $t("welcome") }}</h2>
 				<div class="box">
@@ -84,7 +84,7 @@
 			</div>
 		</section>
 
-		<section id='section2' class="section2 page">
+		<section id='studies' class="studies page">
 			<div class="content">
 				<h2 class='center title'>{{$t("studies.title")}}</h2>
 				<div class="center">
@@ -95,7 +95,7 @@
 						<div class="s12 m10">
 							<div class="timeline-description">
 								<h3>{{$t("studies.adventist")}}</h3>
-								<p><strong>{{$t("place")}}: </strong>La Trindad - Estelí</p>
+								<p><strong>{{$t("place")}}: </strong>La Trindad, Estelí, Ni.</p>
 							</div>
 						</div>
 					</div>
@@ -106,7 +106,7 @@
 						<div class="s12 m10">
 							<div class="timeline-description">
 								<h3>{{$t("studies.baptist")}}</h3>
-								<p><strong>{{$t("place")}}: </strong>La Trindad - Estelí</p>
+								<p><strong>{{$t("place")}}: </strong>La Trindad, Estelí, Ni.</p>
 							</div>
 						</div>
 					</div>
@@ -117,7 +117,7 @@
 						<div class="s12 m10">
 							<div class="timeline-description">
 								<h3>{{$t("studies.reach")}}</h3>
-								<p><strong>{{$t("place")}}: </strong>La Trindad - Estelí</p>
+								<p><strong>{{$t("place")}}: </strong>La Trindad, Estelí, Ni.</p>
 							</div>
 						</div>
 					</div>
@@ -128,14 +128,14 @@
 						<div class="s12 m10">
 							<div class="timeline-description">
 								<h3>{{$t("studies.uni")}}</h3>
-								<p><strong>{{$t("place")}}: </strong>Estelí</p>
+								<p><strong>{{$t("place")}}: </strong>Estelí, Ni.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section id='section3' class="section3 page">
+		<section id='skills' class="skills page">
 			<h2 class='center title'>{{$t("knowledge")}}</h2>
 			<div class="content">
 				<div class="col">
@@ -147,7 +147,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="vermas">Ver Más</div>
+			<div class="vermas">{{$t("more")}}</div>
 		</section>
 
 		<section class="contact">
@@ -169,7 +169,7 @@
 			</form>
 		</section>
 
-		<section id='section4' class="section4">
+		<section id='portfolio' class="portfolio">
 			<h2 class='title center'>{{$t("portfolio")}}</h2>
 			<div class='col center'>
 				<div class='s12 m6 l4' v-for='p in portfolio'>

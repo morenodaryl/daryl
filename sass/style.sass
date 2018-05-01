@@ -108,7 +108,7 @@ nav
 					color: $secondcolor
 
 section
-	&.section1
+	&.presentation
 		position: relative
 		padding: 130px 5px 100px 5px
 		background: url(../img/galaxy.jpg) no-repeat center center fixed
@@ -155,7 +155,7 @@ section
 				h2
 					color: $repintcolor
 
-	&.section2
+	&.studies
 		position: relative
 		width: 100%
 		display: block
@@ -213,7 +213,7 @@ section
 			// background-color: #CCD0DD
 			// background-image: repeating-linear-gradient(-45deg, $linecolor, $linecolor 30px, transparent 30px, transparent 60px)
 
-	&.section3
+	&.skills
 		background-image: url('../img/bluebackground.jpg')
 		background-position: top
 		background-attachment: fixed
@@ -285,7 +285,7 @@ section
 						background-position: -600px -200px
 					&.coffeescript
 						background-position: -0px -400px
-					&.angularjs
+					&.reactjs
 						background-position: -200px -400px
 					&.android
 						background-position: -400px -400px
@@ -320,7 +320,7 @@ section
 				padding-left: 30px
 				padding-right: 30px
 
-	&.section4
+	&.portfolio
 		padding: 50px 0
 		background-color: $myblack
 		.title
@@ -334,7 +334,7 @@ section
 			display: inline-block
 			margin: 10px 0px
 			width: 100%
-			min-height: 430px
+			min-height: 440px
 			border-radius: 10px
 			$c1: rgba($secondcolor, 0.7)
 			$c2: transparent
@@ -359,7 +359,7 @@ section
 @media screen and (min-width: $screenm)
 	.menuflexbtn
 		display: none
-	.section2
+	.studies
 		.content
 			.col:nth-child(2n)
 				.timeline-description:before
@@ -482,7 +482,7 @@ section
 					flex: 1
 					color: white
 
-	.section1
+	.presentation
 		.box
 			text-align: center
 			display: block !important
@@ -491,7 +491,7 @@ section
 			margin: 0 auto
 			.data
 				text-align: left
-	.section2
+	.studies
 		.content
 			.timeline-description
 				margin-top: 0px !important
@@ -500,7 +500,7 @@ section
 				&:before
 					border: none !important
 
-	.section3
+	.skills
 		max-height: 950px
 		overflow: hidden
 		position: relative

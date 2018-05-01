@@ -25,7 +25,7 @@ document.addEventListener('scroll',function(){
 	if (document.body.scrollTop != 0) {
 		v = document.body.scrollTop;
 	}
-	if (v > (document.querySelector('.section2').offsetTop - 50)) {
+	if (v > (document.querySelector('.studies').offsetTop - 50)) {
 		document.querySelector('nav').classList.add('color');
 		document.querySelector('nav').classList.add('fixed');
 
@@ -39,7 +39,7 @@ document.addEventListener('scroll',function(){
 // ver mas click action
 document.querySelector('.vermas').addEventListener('click',function(){
 	this.classList.add('none');
-	document.querySelector('.section3').classList.add('show')
+	document.querySelector('.skills').classList.add('show')
 	
 });
 
