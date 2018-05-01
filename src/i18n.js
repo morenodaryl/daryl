@@ -2,8 +2,7 @@ var messages = {
   en: {
     welcome: 'Hi! Welcome!',
     about_me: 'About me',
-    knowledge: 'Knowledge',
-    knowledges: 'Knowledge',
+    knowledge: 'Skills',
     portfolio: 'Portfolio',
     system_engineer: 'Computer Scientist',
     developer: 'Android and Web Developer Full Stack',
