@@ -11,7 +11,7 @@ var messages = {
     age: 'Age',
     place: 'Place',
     studies: {
-      title: "Studies",
+      title: "Education",
       adventist: 'Started studying in the Adventist primary school',
       baptist: 'Finished up primary school in the Baptist school',
       reach: 'Finished up high school in Reach College',
