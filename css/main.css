@@ -50,6 +50,12 @@
 .language:before {
   content: "\e9ca"; }
 
+.linkedin:before {
+  content: "\eac9"; }
+
+.github:before {
+  content: "\eab0"; }
+
 @keyframes circlemove {
   0% {
     background-position: -600px 0; }
@@ -480,6 +486,8 @@ section.portfolio {
     width: 100%;
     min-height: 440px;
     border-radius: 10px; }
+    section.portfolio .project:hover {
+      transform: scale(1.05); }
     section.portfolio .project img {
       max-width: 100%; }
     section.portfolio .project h3 {
@@ -489,8 +497,31 @@ section.portfolio {
       color: #3A3A3A;
       background-color: #EAEEFF;
       margin-top: 0px;
-      margin-bottom: 0px;
-      padding: 20px; }
+      margin-bottom: 0px; }
+    section.portfolio .project .tags {
+      margin: 5px 20px 10px; }
+      section.portfolio .project .tags span {
+        padding: 5px;
+        margin: 3px 0;
+        background-color: #d2d2d2;
+        margin: 0 2px;
+        font-size: 0.8em;
+        text-transform: uppercase; }
+
+footer {
+  background-color: #3A3A3A;
+  padding: 0 0 40px; }
+  footer ul {
+    text-align: center;
+    margin: 0; }
+    footer ul li {
+      display: inline; }
+      footer ul li a {
+        font-size: 1.5em;
+        margin: 10px;
+        color: white; }
+        footer ul li a:hover {
+          color: #8fc1f9; }
 
 .title {
   font-size: 2.5em;

@@ -179,12 +179,21 @@
 							<p> {{$t(p.title)}}
 								<br/>
 								<a v-bind:href="p.url">{{p.url}}</a></p>
+							<p class='tags'><span v-for='tag in p.tags'>{{tag}}</span></p>
 							<a v-bind:href="p.url" target='_blank'><img v-bind:src='p.img'/></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+		<footer>
+			<ul>
+				<li><a href="https://www.Github.com/morenodaryl" title='Github' class='icon github' target='_blank'></a></li>
+				<li><a href="https://www.Twitter.com/morenodaryl" title='Twitter' class='icon twitter' target='_blank'></a></li>
+				<li><a href="https://www.Linkedin.com/in/morenodaryl" title='Linkedin' class='icon linkedin' target='_blank'></a></li>
+			</ul>
+		</footer>
 
 	</div>
 	<script src="js/packed/myvue.js"></script>

@@ -100,31 +100,37 @@ var app = new Vue({
         title: 'Himnario Adventista',
         url: 'https://goo.gl/nw9zNu',
         img: 'img/himnario.png',
+        tags: ['android', 'java']
       },
       {
         title: 'Biblia Reina Valera 1690',
         url: 'https://goo.gl/hD4dLa',
         img: 'img/biblia.png',
+        tags: ['android', 'kotlin']
       },
       {
         title: 'Lyrics Finder',
         url: 'https://morenodaryl.github.io/lyricsfinder',
         img: 'img/lyricsfinder.jpg',
+        tags: ['react', 'redux', 'html', 'css']
       },
       {
         title: 'Familia Sansón',
         url: 'http://sanson.herokuapp.com/',
         img: 'img/sanson.jpg',
+        tags: ['ruby', 'ruby on rails', 'sass', 'html']
       },
       {
         title: 'Ciudad del pan (descontinuado)',
         url: 'http://www.ciudaddelpan.xyz',
         img: 'img/ciudaddelpan.jpg',
+        tags: ['wordpress', 'html', 'css']
       },
       {
         title: 'Campamento JA',
         url: 'http://bit.ly/CampamentoJA',
         img: 'img/campamentoja.jpg',
+        tags: ['ionic', 'javascript', 'html', 'javascript']
       },
     ]
   }
