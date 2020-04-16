@@ -88,7 +88,7 @@
 			<div class="content">
 				<h2 class='center title'>{{$t("studies.title")}}</h2>
 				<div class="center">
-					<div class="col timeline">
+					<!-- <div class="col timeline">
 						<div class="s12 m2 year-container">
 							<h3 class="year">2001 - 2003</h3>
 						</div>
@@ -109,7 +109,7 @@
 								<p><strong>{{$t("place")}}: </strong>La Trindad, Estelí, Ni.</p>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="col timeline">
 						<div class="s12 m2 year-container">
 							<h3 class="year">2006 - 2010</h3>
@@ -178,7 +178,7 @@
 							<h3>{{p.title}}</h3>
 							<p> {{$t(p.title)}}
 								<br/>
-								<a v-bind:href="p.url">{{p.url}}</a></p>
+								<a v-bind:href="p.url" target='_blank'>{{p.url}}</a></p>
 							<p class='tags'><span v-for='tag in p.tags'>{{tag}}</span></p>
 							<a v-bind:href="p.url" target='_blank'><img v-bind:src='p.img'/></a>
 						</div>

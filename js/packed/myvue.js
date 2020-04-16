@@ -210,11 +210,10 @@ var app = new Vue({
       var birthday = new Date();
       birthday.setMonth(7);
       birthday.setDate(27);
-      // birthday.setYear(1994);
+      birthday.setYear(1994);
       var today = new Date();
-      var ageDifMs = Date.now() - birthday.getTime();
-      var ageDate = new Date(ageDifMs);
-      var age = Math.abs(ageDate.getUTCFullYear() - 1993);
+      var age = Math.abs(birthday.getUTCFullYear() - today.getUTCFullYear());
+
       if (today.getMonth() <= birthday.getMonth() && today.getDate() < birthday.getDate()) {
         age -= 1;
       }
@@ -280,6 +279,21 @@ var app = new Vue({
       desc: "Mysql"
     }],
     portfolio: [{
+      title: 'Carlson Gracie Paramount MMA Facility (Web)',
+      url: 'https://www.carlsongracieparamount.com/',
+      img: 'img/carlson-web.png',
+      tags: ['rails', 'ruby']
+    },{
+      title: 'Carlson Gracie Paramount MMA Facility (Apps)',
+      url: 'https://www.carlsongracieparamount.com/app',
+      img: 'img/carlson-app.png',
+      tags: ['react', 'react-native']
+    }, {
+      title: 'Pro Exports - Sustainable Green Coffee Exporters',
+      url: 'https://proexportsnic.com/',
+      img: 'img/proexp.png',
+      tags: ['wordpress']
+    }, {
       title: 'Himnario Adventista',
       url: 'https://goo.gl/nw9zNu',
       img: 'img/himnario.png',
